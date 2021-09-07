@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="
+	 #330066"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,8 +13,23 @@
     <RelativeLayout
         android:id="@+id/Relative_1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="350dp"
         android:layout_weight="2">
+
+
+        <TextView
+            android:id="@+id/textViewSelectSizeOfArray"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/seekbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginBottom="9dp"
+            android:text="Select Size Of Array"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
 
         <SeekBar
             android:id="@+id/seekbar"
@@ -26,34 +43,55 @@
             android:thumb="@drawable/seekbar_thumb" />
 
         <TextView
+            android:id="@+id/Array_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Array_size"
-            android:layout_below="@id/seekbar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="199dp"
             android:padding="10dp"
             android:text="0"
-            android:textColor="@color/black"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/textViewSelectSizeOfArray"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="174dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="96dp"
+            android:background="#d0d0e1"
+            android:entries="@array/Spinner_items"
+            android:textAlignment="center">
+
+        </Spinner>
+
 
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        <Button
-            android:layout_width="130dp"
-            android:layout_height="50dp"
-            android:id="@+id/visualize_button"
-            android:layout_weight="1"
-            android:layout_centerHorizontal="true"
-            android:text="visualize"
-            android:backgroundTint="@color/black"
-            android:layout_marginTop="20dp"
-/>
 
+        <Button
+            android:id="@+id/visualize_button"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#ff0066"
+            android:text="visualize" />
 
 
     </RelativeLayout>
