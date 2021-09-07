@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <com.sdsmdg.harjot.crollerTest.Croller
+            android:id="@+id/croller"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            app:back_circle_color="#EDEDED"
+            app:indicator_color="#0B3C49"
+            app:indicator_width="10"
+            app:is_continuous="true"
+            app:label_color="#000000"
+            app:main_circle_color="#FFFFFF"
+            app:max="1000"
+            app:progress_primary_color="#0B3C49"
+            app:progress_secondary_color="#EEEEEE"
+            app:start_offset="45" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/croller"
+        android:layout_alignParentBottom="true"
+        >
+
+    <TextView
+        android:id="@+id/showArraySizeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="0"
+        android:layout_margin="28dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#0B3C49"
+        android:textSize="30sp" />
+
+    <Button
+          android:layout_width="140dp"
+          android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+          android:layout_weight="5"
+        android:layout_margin="135dp"
+        android:text="visualize"
+        android:shadowColor="@color/cardview_light_background"
+        />
+</RelativeLayout>
+
+</LinearLayout>
