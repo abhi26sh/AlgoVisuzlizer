@@ -21,13 +21,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(searchingIntent);
             }
         });
-        /*CardView sorting = (CardView)findViewById(R.id.sorting_card_view);
-        searching.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sortingIntent= new Intent(MainActivity.this,SortActivity.class);
-                startActivity(sortingIntent);
-            }
-        });*/
+
     }
 }

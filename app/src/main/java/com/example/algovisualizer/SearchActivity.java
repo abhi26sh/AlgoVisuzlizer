@@ -33,10 +33,22 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         visualizeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SearchActivity.this, HelloActivity.class);
-                intent.putExtra("array size",textViewForArraySize.toString());
-                intent.putExtra("algorithm selected",algoSelectedfromSpinner);
-                startActivity(intent);
+                if(algoSelectedfromSpinner==null)
+                {
+                   Toast.makeText(v.getContext(),"Please select an algorithm",Toast.LENGTH_SHORT).show();
+                }
+                else if(algoSelectedfromSpinner.equals("Select an algorithm:"))
+                {
+                    Toast.makeText(v.getContext(),"Please select an algorithm",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Intent intent=new Intent(v.getContext(),VisualizeSearching.class);
+                    intent.putExtra("array size",textViewForArraySize.toString());
+                    intent.putExtra("algorithm selected",algoSelectedfromSpinner);
+                    startActivity(intent);
+                }
+
             }
         });
 
@@ -69,6 +81,18 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
 
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        algoSelectedfromSpinner=null;
+        super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        algoSelectedfromSpinner=null;
+        super.onRestart();
     }
 
     @Override
