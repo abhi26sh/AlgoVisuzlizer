@@ -5,15 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import com.example.algovisualizer.Visualizer.MyCanvas;
 
 public class VisualizeSearching extends AppCompatActivity {
 
     MyCanvas myCanvas;
+    LinearLayout linearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_visualize_searching);
+        linearLayout=findViewById(R.id.linear_layout);
         Intent intent=getIntent();
 
             try {
@@ -28,7 +32,7 @@ public class VisualizeSearching extends AppCompatActivity {
         myCanvas = new MyCanvas(this);
          /*   myCanvas.setData(DataUtils.createRandomArray(size));
             myCanvas.start();*/
-        myCanvas.setBackgroundColor(Color.RED);
-        setContentView(myCanvas);
+        linearLayout.addView(myCanvas);
+
     }
 }
